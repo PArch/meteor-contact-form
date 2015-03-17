@@ -1,8 +1,8 @@
 Package.describe({
-  name: 'bredikhin:contact-form',
-  summary: 'A simple contact form',
+  name: 'scalloped:contact-form',
+  summary: 'A simple contact form [experimental fork]',
   version: '1.0.0',
-  git: 'https://github.com/bredikhin/meteor-contact-form'
+  git: 'https://github.com/tenshiemi/meteor-contact-form'
 });
 
 Package.onUse(function(api) {
