@@ -1,6 +1,6 @@
 # Simple contact form for Meteor applications
 
-Add a simple mailable contact form to your Web application. This is modified from Ruslan Bredikhin's [contact form](https://github.com/bredikhin/meteor-contact-form).
+Add a simple mailable contact form to your Web application. This is modified from Ruslan Bredikhin's [contact form](https://github.com/bredikhin/meteor-contact-form) and available on [Atmosphere](https://atmospherejs.com/scalloped/contact-form)
 
 Changes:
 - Added custom subject
