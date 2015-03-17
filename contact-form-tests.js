@@ -32,10 +32,6 @@ Tinytest.add('Schema - contactForm - email', function (test) {
   test.instanceOf(Schema.contactForm._schema.email, Object);
 });
 
-Tinytest.add('Schema - contactForm - subject', function (test) {
-  test.instanceOf(Schema.contactForm._schema.subject, Object);
-});
-
 Tinytest.add('Schema - contactForm - message', function (test) {
   test.instanceOf(Schema.contactForm._schema.message, Object);
 });

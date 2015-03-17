@@ -10,11 +10,6 @@ Schema.contactForm = new SimpleSchema({
     regEx: SimpleSchema.RegEx.Email,
     label: "Your e-mail"
   },
-  subject: {
-    type: String,
-    label: "Subject",
-    max: 256
-  },
   message: {
     type: String,
     label: "Message",
