@@ -1,7 +1,7 @@
 Package.describe({
   name: 'scalloped:contact-form',
   summary: 'A simple contact form with custom subject',
-  version: '1.0.3',
+  version: '1.0.4',
   git: 'https://github.com/tenshiemi/meteor-contact-form'
 });
 
@@ -14,6 +14,7 @@ Package.onUse(function(api) {
   api.addFiles([
     'client/views/contact-form.html',
     'client/views/contact-form.js',
+    'client/views/contact-form.css'
     ], 'client');
   api.addFiles('server/contact-form.js', 'server');
 });
@@ -25,6 +26,7 @@ Package.onTest(function(api) {
   api.addFiles([
     'client/views/contact-form.html',
     'client/views/contact-form.js',
+    'client/views/contact-form.css'
     ], 'client');
     api.addFiles('server/contact-form.js', 'server');
   api.addFiles('contact-form.js');

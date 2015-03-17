@@ -1,0 +1,20 @@
+#contactForm > fieldset {
+  border: none;
+}
+
+.contactForm__status {
+  margin-left: 12px;
+  position: relative;
+  top: 1px;
+}
+
+#contactForm .has-error > input,
+#contactForm .has-error > textarea {
+  border: solid 1px #DB5950;
+  margin-bottom: 0px;
+}
+
+#contactForm .help-block {
+  color: #DB5950;
+  font-size: 12px;
+}

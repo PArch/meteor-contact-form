@@ -1,12 +1,11 @@
 <template name="contactForm">
   {{#autoForm schema=contactFormSchema id="contactForm" type="method" meteormethod="sendEmail"}}
     <fieldset>
-      {{> afQuickField name="name"}}
-      {{> afQuickField name="email"}}
-      {{> afQuickField name="message" rows=10}}
+      {{> afQuickField name="name" placeholder="Your name" label=false}}
+      {{> afQuickField name="email" placeholder="Your e-mail address" label=false}}
+      {{> afQuickField name="message" placeholder="Your message" rows=10 label=false}}
       <div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="reset" class="btn btn-default">Reset</button>
+        <button type="submit" class="btn btn-primary">Submit</button> <span class='contactForm__status'></span>
       </div>
     </fieldset>
   {{/autoForm}}
