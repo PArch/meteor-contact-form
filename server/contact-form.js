@@ -3,8 +3,8 @@ Meteor.methods({
     check(data, Schema.contactForm);
 
     var text = data.name + " - "
-    + data.email + "\n\n\n\n"
-    + "\n\n" + data.message;
+    + data.email + "\n\n\n"
+    + data.message;
 
     this.unblock();
 
