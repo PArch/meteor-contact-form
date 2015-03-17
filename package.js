@@ -1,7 +1,7 @@
 Package.describe({
   name: 'scalloped:contact-form',
   summary: 'A simple contact form with custom subject',
-  version: '1.0.4',
+  version: '1.0.5',
   git: 'https://github.com/tenshiemi/meteor-contact-form'
 });
 
