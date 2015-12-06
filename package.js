@@ -1,9 +1,9 @@
 Package.describe({
-  name: 'branco:contact-form',
-  summary: 'A cotact form with reCaptcha implementation to prevent spam',
-  version: '1.0.0',
+  name: 'juniobranco:contact-form',
+  summary: 'A contact form with reCaptcha implementation to prevent spa',
+  version: '1.0.2',
   documentation:"README.md",
-  git: 'https://github.com/tenshiemi/meteor-contact-form'
+  git: 'https://github.com/branco91/meteor-contact-form'
 });
 
 Package.onUse(function(api) {
@@ -29,7 +29,8 @@ Package.onTest(function(api) {
     'client/views/contact-form.js',
     'client/views/contact-form.css'
     ], 'client');
-    api.addFiles('server/contact-form.js', 'server');
+  api.use('templating', 'client');
+  api.addFiles('server/contact-form.js', 'server');
   api.addFiles('contact-form.js');
   api.addFiles('contact-form-tests.js');
 });
