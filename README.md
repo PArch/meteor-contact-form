@@ -55,6 +55,11 @@ Display on the client:
 ...
 ```
 
+## What is next?
+
+- Custom Schema injection - Allows specification of a given schema to be used for the contact form
+- i18n integration - Enabling  multi-lingual contact form.
+
 ## License
 
 [The MIT License](http://opensource.org/licenses/MIT)
