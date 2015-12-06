@@ -1,7 +1,7 @@
 Package.describe({
   name: 'branco:contact-form',
   summary: 'A contact form with reCaptcha implementation to prevent spam',
-  version: '1.0.2',
+  version: '1.0.3',
   documentation:"README.md",
   git: 'https://github.com/branco91/meteor-contact-form'
 });
