@@ -7,6 +7,11 @@ Meteor.startup(function () {
 
 Template.contactForm.helpers({
     contactFormSchema: function () {
+        var customSchema = this.schema;
+        if (customSchema) {
+            console.log("Yo")
+            return customSchema;
+        }
         return Schema.contactForm;
     }
 });
@@ -25,8 +30,7 @@ AutoForm.hooks({
 
                 if (error) {
                     var errorMessage = "Error - Please try again";
-                    if(error.reason == "Invalid Captcha")
-                    {
+                    if (error.reason == "Invalid Captcha") {
                         errorMessage = error.reason;
                     }
                     console.log(error);
