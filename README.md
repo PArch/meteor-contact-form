@@ -18,7 +18,7 @@ Changes:
 All it takes is two simple steps:
 
 ###1. Sign up and get the public and secret key from Google reCaptcha service:
-https://www.google.com.hk/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=recaptcha
+https://www.google.com/recaptcha/intro/index.html
 
 ###2. Configure on the server:
 Setup your settings.json (at the root of your project)
