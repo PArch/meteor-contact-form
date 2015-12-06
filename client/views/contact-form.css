@@ -18,3 +18,15 @@
   color: #DB5950;
   font-size: 12px;
 }
+.contactForm-status.success {
+  background: #45C191;
+  padding: 10px;
+  margin: 10px 0px 10px 0px;
+  color: #fff;
+}
+.contactForm-status.error {
+  background: #DB5950;
+  padding: 10px;
+  margin: 10px 0px 10px 0px;
+  color: #fff;
+}

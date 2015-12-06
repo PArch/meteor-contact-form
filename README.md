@@ -1,28 +1,52 @@
 # Simple contact form for Meteor applications
 
-Add a simple mailable contact form to your Web application. This is modified from Ruslan Bredikhin's [contact form](https://github.com/bredikhin/meteor-contact-form) and available on [Atmosphere](https://atmospherejs.com/scalloped/contact-form)
+This is a contact form based on https://github.com/bredikhin/meteor-contact-form
+
+The current implementation integrates with https://github.com/appshore/Meteor-reCAPTCHA/ that utilizes Google reCaptcha service.
 
 Changes:
-- Added custom subject
-- Removed Subject form fields
+- Added appshore recaptcha
+- Changed the status message to the top of the form.
+- Changed the way emailTo needs to be specified.
 
 ## Installation
 
-`meteor add scalloped:contact-form`
+`meteor add branco:contact-form`
 
 ## Usage
 
-Configure on the server:
+All it takes is two simple steps:
 
-```javascript
-Meteor.settings.contactForm = {
-  emailTo: 'someone@somewhere.com',
-  emailSubject: function (params) {
-    'Message from ' + params.name + ' via contact form'
+###1. Sign up and get the public and secret key from Google reCaptcha service:
+https://www.google.com.hk/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=recaptcha
+
+###2. Configure on the server:
+Setup your settings.json (at the root of your project)
+```settings.json
+{
+
+  "public":
+  {
+    "contactForm":
+    {
+      "emailTo":"someone@abcd.com"
+    },
+    "recaptcha":
+    {
+      "publickey":"<public_key_from_google>"
+    },
+  },
+  "private":
+  {
+    "recaptcha":
+    {
+      "secretKey":"<secret_key_from_google>"
+    },
   }
-};
+}
 ...
 ```
+
 
 Display on the client:
 
@@ -35,4 +59,4 @@ Display on the client:
 
 [The MIT License](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2015 Emily Chen
+Copyright (c) 2015 Junio Branco

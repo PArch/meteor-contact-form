@@ -1,9 +1,12 @@
 <template name="contactForm">
-  {{#autoForm schema=contactFormSchema id="contactForm" type="method" meteormethod="sendEmail"}}
+    <div class="contactForm-status"></div>
+  {{#autoForm schema=contactFormSchema id="contactForm" type="method" meteormethod="sendEmail" }}
     <fieldset>
-      {{> afQuickField name="name" placeholder="Your name" label=false}}
-      {{> afQuickField name="email" placeholder="Your e-mail address" label=false}}
-      {{> afQuickField name="message" placeholder="Your message" rows=10 label=false}}
+      {{> afQuickField name="name" placeholder="Your name" label=false }}
+      {{> afQuickField name="email" placeholder="Your e-mail address" label=false }}
+      {{> afQuickField name="subject"}}
+      {{> afQuickField name="message" placeholder="Your message" rows=10 label=false }}
+      {{> reCAPTCHA }}
       <div>
         <button type="submit" class="btn btn-primary">Submit</button> <span class='contactForm__status'></span>
       </div>
