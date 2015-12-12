@@ -1,7 +1,7 @@
 Package.describe({
-  name: 'branco:contact-form',
+  name: 'juniobranco:contact-form',
   summary: 'A contact form with reCaptcha implementation to prevent spam',
-  version: '1.0.3',
+  version: '1.0.4',
   documentation:"README.md",
   git: 'https://github.com/branco91/meteor-contact-form'
 });
@@ -11,6 +11,7 @@ Package.onUse(function(api) {
   api.use('email', 'server');
   api.use('templating', 'client');
   api.use('aldeed:autoform@5.5.1');
+  api.use('gildaspk:simpleschema-tapi18n-labels@0.0.2');
   api.use('appshore:recaptcha@2.0.6');
   api.addFiles('contact-form.js');
   api.addFiles([

@@ -9,7 +9,6 @@ Template.contactForm.helpers({
     contactFormSchema: function () {
         var customSchema = this.schema;
         if (customSchema) {
-            console.log("Yo")
             return customSchema;
         }
         return Schema.contactForm;

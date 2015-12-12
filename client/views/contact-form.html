@@ -2,10 +2,10 @@
     <div class="contactForm-status"></div>
   {{#autoForm schema=contactFormSchema id="contactForm" type="method" meteormethod="sendEmail" }}
     <fieldset>
-      {{> afQuickField name="name" placeholder="schemaLabel" label=false }}
-      {{> afQuickField name="email" placeholder="schemaLabel" label=false }}
-      {{> afQuickField name="subject" placeholder="schemaLabel" label=false}}
-      {{> afQuickField name="message" placeholder="schemaLabel" rows=10 label=false }}
+      {{> afQuickField name="name"  label=true }}
+      {{> afQuickField name="email"  label=true }}
+      {{> afQuickField name="subject"  label=true}}
+      {{> afQuickField name="message"  rows=10 label=true }}
       {{> reCAPTCHA }}
       <div>
         <button type="submit" class="btn btn-primary">Submit</button> <span class='contactForm__status'></span>

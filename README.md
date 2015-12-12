@@ -51,9 +51,43 @@ Setup your settings.json (at the root of your project)
 Display on the client:
 
 ```html
-{{>contactForm}}
+{{>contactForm }}
 ...
 ```
+
+##Custom Schema with i18n
+
+You can override the default Schema by using
+- In your template:
+```html
+<template name="myform">
+{{contactForm schema=contactSchema}}
+</template>
+```
+-Define a helper to provide the custom schema
+
+```html
+
+Schema.contactForm = new SimpleSchema({
+    name: {
+        type: String,
+        autoform: {
+            type: "text"
+        },
+        i18nLabel: '<Tapi18n.key>',
+        max: 64
+    },
+    ...
+});
+
+Template.myform.helpers({
+  "contactSchema": function()
+  {
+    return Schema.contactForm;
+  }
+}
+```
+By specifying the i18nLabel ( which corresponds to a TAPi18n key that you should have previously defined) it will reactively change according to the language set.
 
 ## What is next?
 
