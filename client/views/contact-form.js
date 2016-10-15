@@ -1,8 +1,11 @@
 Meteor.startup(function () {
+  if( typeof Meteor.settings.public.recaptcha !== "undefined")
+  {
     reCAPTCHA.config({
         theme: 'light',  // 'light' default or 'dark'
         publickey: Meteor.settings.public.recaptcha.publickey
     });
+      }
 });
 
 Template.contactForm.helpers({
