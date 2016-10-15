@@ -6,6 +6,10 @@ Meteor.startup(function () {
 });
 
 Template.contactForm.helpers({
+    recaptchaKeyPreset: function()
+    {
+       return typeof Meteor.settings.public.recaptcha !== "undefined";
+    }
     contactFormSchema: function () {
         var customSchema = this.schema;
         if (customSchema) {
